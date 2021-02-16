@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    tools:context=".UserChatActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:padding="8dp"
+        android:id="@+id/header"
+        >
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/profile"
+            android:id="@+id/profile_pic"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/profile_pic"
+            android:text="user name"
+            android:layout_centerVertical="true"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:layout_marginStart="8dp"
+            android:id="@+id/username"
+            />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:id="@+id/chat_list"
+        android:layout_above="@+id/sender"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:id="@+id/sender"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="10dp"
+            android:hint="Type your message..."
+            android:layout_centerInParent="true"
+            android:id="@+id/message"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/send"
+            android:src="@drawable/send"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:background="#fff"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
